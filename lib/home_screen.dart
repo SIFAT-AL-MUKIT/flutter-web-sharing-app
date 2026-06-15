@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           await _requestStoragePermission();
           await _svc.startLocalServer(_rootDir);
         }
-        await _svc.startInternetTunnel();
+        await _svc.startInternetTunnel(_rootDir);
       }
     } catch (e) {
       if (mounted) _showSnack('Error: $e');
